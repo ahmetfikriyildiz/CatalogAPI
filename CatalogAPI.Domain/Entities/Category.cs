@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace CatalogAPI.Domain.Entities
 {
-    public class Customer : BaseEntitiy
-    {
-        public string Name { get; set; }
-        public ICollection<Order> Orders { get; set; }
-    }
+    public class Category : BaseEntitiy
+    { 
+    public string Description { get; set; }
+    public List<Category> SubCategories { get; set; }
+    public List<Product> Products { get; set; }
+
+}
 }

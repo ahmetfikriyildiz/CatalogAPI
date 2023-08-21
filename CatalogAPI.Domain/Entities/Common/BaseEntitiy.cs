@@ -8,7 +8,8 @@ namespace CatalogAPI.Domain.Entities.Common
 {
     public class BaseEntitiy
     {
-        public Guid Id { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        
     }
 }

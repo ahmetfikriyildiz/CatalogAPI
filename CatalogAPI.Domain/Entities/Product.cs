@@ -1,4 +1,5 @@
-﻿using CatalogAPI.Domain.Entities.Common;
+﻿
+using CatalogAPI.Domain.Entities.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,8 @@ namespace CatalogAPI.Domain.Entities
 {
     public class Product : BaseEntitiy
     {
-        public string Name { get; set; }
-        public int Stock { get; set; }
-        public long Price { get; set; }
-
-        public ICollection<Order> Orders { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public string StockStatus { get; set; }
     }
 }
