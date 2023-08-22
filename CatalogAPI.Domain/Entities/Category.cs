@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CatalogAPI.Domain.Entities
 {
-    public class Category : BaseEntitiy
+    public class Category : BaseEntity
     { 
     public string Description { get; set; }
     public List<Category> SubCategories { get; set; }

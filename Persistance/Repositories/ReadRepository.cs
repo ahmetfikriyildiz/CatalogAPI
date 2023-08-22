@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Persistance.Repositories
 {
-    public class ReadRepository<T> : IReadRepository<T> where T : BaseEntitiy
+    public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
         private readonly CatalogAPIDbContext _context;
 

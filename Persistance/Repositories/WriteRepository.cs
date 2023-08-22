@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Persistance.Repositories
 {
-    public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntitiy
+    public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
         private readonly CatalogAPIDbContext _context;
 

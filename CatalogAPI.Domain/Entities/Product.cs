@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CatalogAPI.Domain.Entities
 {
-    public class Product : BaseEntitiy
+    public class Product : BaseEntity
     {
         public string Description { get; set; }
         public double Price { get; set; }

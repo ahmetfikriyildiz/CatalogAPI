@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CatalogAPI.Application.Repositories
 {
-    public interface IRepository < T> where T : BaseEntitiy
+    public interface IRepository < T> where T : BaseEntity
     { 
         DbSet<T> Table { get; } 
     }

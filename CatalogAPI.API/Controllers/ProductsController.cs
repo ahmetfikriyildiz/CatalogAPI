@@ -20,14 +20,29 @@ namespace CatalogAPI.API.Controllers
         [HttpGet]
         public async Task Get()
         {
+
+            await _prodcutWriteRepository.AddAsync(new()
+            {
+              Id=1,Name ="name",Description="kazak",Price=1,StockStatus="1",
+
+            });
+            await _prodcutWriteRepository.SaveAsync();
+
+
+
+
+
             //await _prodcutWriteRepository.AddRangeAsync(new()
             //{
             //    new() { Id = 0, Name="product1", Description="kazak", Price= 50, StockStatus= "1"}
             //});
             //await _prodcutWriteRepository.SaveAsync();
-            Product p = await _productReadRepository.GetByIdAsync("1",false);
-                p.Name = "fici";
-            await _prodcutWriteRepository.SaveAsync();
+
+
+            //Product p = await _productReadRepository.GetByIdAsync("1",false);
+            //    p.Name = "fici";
+            //await _prodcutWriteRepository.SaveAsync();
+
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(string id)

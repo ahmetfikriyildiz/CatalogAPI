@@ -13,8 +13,23 @@ namespace Persistance.Contexts
     {
         public CatalogAPIDbContext(DbContextOptions options):base (options) 
         { }
-        public DbSet<BaseEntitiy> BaseEntities { get; set; }
+        public DbSet<BaseEntity> BaseEntities { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            var data = ChangeTracker.Entries<BaseEntity>();
+
+            foreach (var entry in data) {
+
+                _ = data.State switch
+                {
+                    EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
+                };
+            }
+
+            return await base.SaveChangesAsync(cancellationToken);
+        }
     }
 }
