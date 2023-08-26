@@ -9,5 +9,7 @@ namespace CatalogAPI.Application.Repositories
 {
     public interface IProductReadRepository : IReadRepository<Product>
     {
+        Task<Product> GetByIdAsync(int ıd);
+        Task<Product> GetByIdAsync(int? ıd);
     }
 }

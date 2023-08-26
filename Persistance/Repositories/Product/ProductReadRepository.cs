@@ -9,10 +9,20 @@ using System.Threading.Tasks;
 
 namespace Persistance.Repositories
 {
-    internal class ProductReadRepository : ReadRepository<Product>, IProductReadRepository
+    public class ProductReadRepository : ReadRepository<Product>, IProductReadRepository
     {
         public ProductReadRepository(CatalogAPIDbContext context) : base(context)
         {
+        }
+
+        public Task<Product> GetByIdAsync(int ıd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> GetByIdAsync(int? ıd)
+        {
+            throw new NotImplementedException();
         }
     }
 }
